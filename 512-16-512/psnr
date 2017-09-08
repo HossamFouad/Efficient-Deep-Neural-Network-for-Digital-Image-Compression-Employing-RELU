@@ -1,0 +1,19 @@
+3 hours
+lena:27.1945
+cameraman:26.4112
+boat:25.3471
+mandril:23.9639
+peppers:27.1807
+
+
+
+
+
+
+lena=imread('boat.png');
+imshow(lena)
+lenamod=process(lena);
+lenamod=im2double(lenamod);
+[x,y]=net1.test(lenamod,lenamod);
+peaksnr = psnr(lenamod,x)
+imshow(row_to_img(x));
